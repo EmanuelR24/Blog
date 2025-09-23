@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Comunicación - ADSO 3147913</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0a0f;
+            --primary-navy: #1e1e2e;
+            --primary-slate: #2a2d47;
+            --accent-platinum: #e5e7eb;
+            --accent-gold: #fbbf24;
+            --accent-emerald: #10b981;
+            --accent-sapphire: #3b82f6;
+            --accent-crimson: #ef4444;
+            --text-white: #ffffff;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+            --text-muted: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --gradient-primary: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            --gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            --gradient-sapphire: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-emerald: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-crimson: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            --gradient-platinum: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+            --shadow-deep: 0 25px 80px rgba(0, 0, 0, 0.6);
+            --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.4);
+            --shadow-light: 0 8px 25px rgba(0, 0, 0, 0.25);
+            --glow-gold: 0 0 30px rgba(251, 191, 36, 0.3);
+            --glow-sapphire: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .main-container {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .background-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin: 2rem 0;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-deep);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-1);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .team-badge {
+            display: inline-block;
+            background: var(--gradient-2);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .navigation-bar {
+            background: rgba(22, 33, 62, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            box-shadow: var(--shadow-medium);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: var(--gradient-1);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin: 3rem 0;
+            padding: 3rem;
+            box-shadow: var(--shadow-deep);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .evidence-badge {
+            background: var(--gradient-2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            flex: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .intro-paragraph {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .highlight-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            padding: 0.2rem 0;
+        }
+
+        .professional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .professional-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .professional-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-3);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .professional-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-deep);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .professional-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .author-tag {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+            display: inline-block;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-gold);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .story-showcase {
+            background: linear-gradient(135deg, rgba(74, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+            border: 1px solid rgba(74, 172, 254, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .story-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+            text-align: justify;
+            font-style: italic;
+        }
+
+        .reflection-container {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            border: 1px solid rgba(240, 147, 251, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+        }
+
+        .team-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: linear-gradient(145deg, rgba(162, 155, 254, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
+            border: 1px solid rgba(162, 155, 254, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .team-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .team-description {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .objective-highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-list li:before {
+            content: '✦';
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .footer-section {
+            background: var(--primary-blue);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-deep);
+        }
+
+        .footer-text {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .professional-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navigation-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .content-section {
+                padding: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: var(--gradient-3);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="background-pattern"></div>
+        
+        <div class="container">
+            <header class="header-section">
+                <h1 class="main-title">Portafolio Académico de Comunicación</h1>
+                <p class="subtitle">Programa Análisis y Desarrollo de Software (ADSO)</p>
+                <p class="subtitle">Instructora: Kenia Nayiver López Ramírez</p>
+                <p class="subtitle">Centro de Servicios y Gestión Empresarial - SENA</p>
+                <div class="team-badge">
+                    <i class="fas fa-users"></i>
+                    Ficha 3147913 | Emanuel Lara • Jhonatan Restrepo • Mateo Dirgua
+                </div>
+            </header>
+
+            <nav class="navigation-bar">
+                <a href="#intro" class="nav-link">
+                    <i class="fas fa-home"></i> Introducción
+                </a>
+                <a href="#evidencia0" class="nav-link">
+                    <i class="fas fa-book"></i> Cuento Creativo
+                </a>
+                <a href="#evidencia1" class="nav-link">
+                    <i class="fas fa-comments"></i> 1ª Evidencia
+                </a>
+                <a href="#evidencia2" class="nav-link">
+                    <i class="fas fa-language"></i> 2ª Evidencia
+                </a>
+                <a href="#evidencia3" class="nav-link">
+                    <i class="fas fa-hand-paper"></i> 3ª Evidencia
+                </a>
+                <a href="#evidencia4" class="nav-link">
+                    <i class="fas fa-film"></i> 4ª Evidencia
+                </a>
+                <a href="#equipo" class="nav-link">
+                    <i class="fas fa-user-graduate"></i> Equipo
+                </a>
+            </nav>
+
+            <section id="intro" class="content-section">
+                <div class="section-header">
+                    <i class="fas fa-lightbulb card-icon"></i>
+                    <h2 class="section-title">Fundamentos de la Comunicación</h2>
+                </div>
+                
+                <p class="intro-paragraph">
+                    La comunicación constituye el proceso fundamental mediante el cual los seres humanos intercambiamos información, ideas, emociones y conocimientos. Trasciende el simple acto de hablar, abarcando todas las modalidades mediante las cuales transmitimos y recibimos mensajes: <span class="">comunicación verbal</span>, <span class="">no verbal</span>, <span class="">escrita</span> y <span class="El nido del pichón (Escena en la aldea)
+Ademanes/Emblemas: Mohammad trepa a un árbol y encuentra un pichón que se ha caído del nido. Sus manos exploran con extrema delicadeza el cuerpo del ave. Este ademán es de pura compasión y empatía. Es un emblema de su rol como protector de lo frágil, reflejando su propia vulnerabilidad. Luego, lleva el pichón a su abuela, buscando ayuda.
+
+Significado: Muestra su conexión espiritual e inocente con la naturaleza y la vida. Es un gesto que su padre, centrado en lo práctico y lo material, es incapaz de entender.
+">digital</span>.
+                </p>
+                
+                <p class="intro-paragraph">
+                    En nuestra formación como Analistas y Desarrolladores de Software, la comunicación se convierte en una competencia estratégica esencial. No únicamente debemos desarrollar código que las máquinas interpreten correctamente, sino también comunicar conceptos complejos a equipos multidisciplinarios, usuarios finales y stakeholders empresariales. La comunicación efectiva optimiza la colaboración, facilita la resolución de problemas y permite crear soluciones tecnológicas que satisfagan genuinamente las necesidades organizacionales.
+                </p>
+                
+                <div class="objective-highlight">
+                    <i class="fas fa-target"></i>
+                    La comunicación asertiva es el puente que conecta el pensamiento individual con la acción colectiva, fundamental para el éxito profesional en el desarrollo de software.
+                </div>
+            </section>
+
+            <section id="evidencia0" class="content-section">
+                <div class="section-header">
+                    <div class="evidence-badge">EVIDENCIA 0</div>
+                    <h2 class="section-title">Cuento Creativo: La Sapa Caramelo</h2>
+                </div>
+                
+                <div class="objective-highlight">
+                    <i class="fas fa-pencil-alt"></i>
+                    Objetivo: Desarrollar narrativa creativa incorporando elementos lingüísticos específicos (MOCO, ESTACA, NUDO, TAPA, ESPERANZA)
+                </div>
+
+                <div class="professional-grid">
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-feather-alt card-icon"></i>
+                            <h3 class="card-title">Versión: Emanuel Lara Tejada</h3>
+                        </div>
+                        <div class="content-box">
+                            <p class="story-text">"Estaba la sapa caramelo sentada a la orilla del río Cauca, en el peñasco más alto de la región, contempló el hermoso paisaje y soñó con visitar todos los demás peñascos del mundo. Una fuerte brisa le molestó la nariz, provocando que se sacara un <strong>moco</strong> malicioso que tiró en una <strong>estaca</strong> al borde del peñasco. Reposó bajo un árbol donde observó un curioso <strong>nudo</strong> de raíces y le tomó una fotografía. Al revisar su mochila encontró una botella cuya <strong>tapa</strong> contenía un hermoso mensaje de <strong>esperanza</strong>. Sonrió y continuó su tranquilo día en la cima."</p>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-feather-alt card-icon"></i>
+                            <h3 class="card-title">Versión: Mateo Dirgua Hoyos</h3>
+                        </div>
+                        <div class="content-box">
+                            <p class="story-text">"La Sapa caramelo observaba desde el peñasco más alto del río Cauca el vuelo de águilas persiguiendo serpientes que se alimentaban de un caballo en descomposición. El exceso de <strong>MOCO</strong> del animal alertó a las aves. La finca de 100 hectáreas estaba dividida del pueblo por una <strong>ESTACA</strong> con púas. Mientras observaba cómo hacían un <strong>NUDO</strong> en la hamaca, el dueño cayó al suelo por una <strong>TAPA</strong> de café. Sin signos vitales aparentes, la Sapa mantuvo la <strong>ESPERANZA</strong> de que se levantaría."</p>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-crown card-icon"></i>
+                            <h3 class="card-title">Versión: Jhonatan Alexis Restrepo</h3>
+                        </div>
+                        <div class="content-box">
+                            <p class="story-text">"Estaba la sapa caramelo sentada a la orilla del río Cauca, en el peñasco más alto de la región, contemplando la posibilidad de mudarse allá con la gente de su reino. Su pueblo la molestaba constantemente por comer <strong>MOCO</strong>, aunque ella insistía en que era rico y nutritivo, pero ya nadie la tomaba en serio. El reino había estado en guerra durante años, y hacía una década habían asesinado a su padre con una <strong>ESTACA</strong>. Cuando el pueblo descubrió al asesino, le hicieron un <strong>NUDO</strong> en el cuello y lo ejecutaron. La princesa permaneció encerrada bajo tierra durante mucho tiempo, con una <strong>TAPA</strong> que no la dejaba salir. Cuando finalmente emergió y la gente la reconoció, logró devolverles la <strong>ESPERANZA</strong>, asumió el gobierno y puso fin a la guerra."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evidencia1" class="content-section">
+                <div class="section-header">
+                    <div class="evidence-badge">1ª EVIDENCIA</div>
+                    <h2 class="section-title">Taller de Comunicación Asertiva</h2>
+                </div>
+
+                <div class="objective-highlight">
+                    <i class="fas fa-bullseye"></i>
+                    Competencia: "Desarrollar procesos de comunicación eficaces y efectivos, considerando situaciones de orden social, personal y productivo"
+                </div>
+
+                <div class="professional-grid">
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h3 class="card-title">Emanuel Lara Tejada</h3>
+                        </div>
+                        <div class="author-tag">Con: Juan Manuel Santa</div>
+                        <div class="content-box">
+                            <h4>Tipología Comunicacional Identificada:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Comunicación Pasiva:</strong> Prioriza necesidades ajenas sobre las propias</li>
+                                <li><strong>Comunicación Agresiva:</strong> Ignora derechos de terceros</li>
+                                <li><strong>Comunicación Pasivo-Agresiva:</strong> Utiliza indirectas y sarcasmo</li>
+                                <li><strong>Comunicación Asertiva:</strong> Balance entre expresión honesta y respeto mutuo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h3 class="card-title">Jhonatan Alexis Restrepo</h3>
+                        </div>
+                        <div class="author-tag">Con: Diego Alejandro Gaviria</div>
+                        <div class="content-box">
+                            <h4>Características de Comunicación Asertiva:</h4>
+                            <ul class="feature-list">
+                                <li>Declaraciones en primera persona</li>
+                                <li>Establecimiento de límites claros</li>
+                                <li>Práctica de escucha activa</li>
+                                <li>Manejo constructivo de críticas</li>
+                                <li>Lenguaje corporal congruente</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-graduate card-icon"></i>
+                            <h3 class="card-title">Mateo Dirgua Hoyos</h3>
+                        </div>
+                        <div class="author-tag">Con: Yorman Alirio Ocampo</div>
+                        <div class="content-box">
+                            <h4>Análisis Diferencial:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Pasiva:</strong> Comunicación respetuosa que evita expresar sentimientos</li>
+                                <li><strong>Agresiva:</strong> Expresión dominante sin consideración de derechos ajenos</li>
+                                <li><strong>Asertiva:</strong> Equilibrio entre necesidades propias y respeto hacia otros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reflection-container">
+                    <h3 class="story-title">Reflexiones sobre Experiencias Familiares</h3>
+                    
+                    <div class="professional-grid">
+                        <div class="content-box">
+                            <strong>Emanuel Lara Tejada:</strong> "En conflictos familiares con mi hermano, inicialmente adoptamos patrones pasivo-agresivos, evitando confrontaciones directas pero expresando descontento mediante indirectas. La implementación de comunicación asertiva nos permitió expresar necesidades de manera directa y respetuosa, fortaleciendo nuestra relación."
+                        </div>
+                        
+                        <div class="content-box">
+                            <strong>Jhonatan Restrepo:</strong> "Las conversaciones con mi madre sobre decisiones académicas iniciaban pasivamente pero escalaban a agresivas cuando percibía falta de escucha. La aplicación de técnicas de escucha activa y expresión en primera persona mejoró significativamente nuestras interacciones."
+                        </div>
+                        
+                        <div class="content-box">
+                            <strong>Mateo Dirgua:</strong> "Los desacuerdos con mi padre sobre responsabilidades domésticas me llevaban a adoptar posturas pasivas por respeto, generando frustración acumulada. Aprender a establecer límites claros y expresar necesidades asertivamente fortaleció nuestra relación."
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evidencia2" class="content-section">
+                <div class="section-header">
+                    <div class="evidence-badge">2ª EVIDENCIA</div>
+                    <h2 class="section-title">Funciones del Lenguaje - Análisis Especializado</h2>
+                </div>
+
+                <div class="professional-grid">
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-heart card-icon"></i>
+                            <h3 class="card-title">Función Emotiva</h3>
+                        </div>
+                        <div class="author-tag">Emanuel Lara Tejada</div>
+                        <div class="author-tag">Con: Manuel Esteban Sanchez, Yorman Alirio Ocampo</div>
+                        <div class="content-box">
+                            <h4>Características Fundamentales:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Subjetividad:</strong> Expresión de emociones personales del emisor</li>
+                                <li><strong>Recursos expresivos:</strong> Exclamaciones, interjecciones, léxico valorativo</li>
+                                <li><strong>Modalidad personal:</strong> Uso predominante de primera persona</li>
+                                <li><strong>Entonación marcada:</strong> Variaciones melódicas significativas</li>
+                            </ul>
+                            <p><strong>Propósito:</strong> Transmitir estados emocionales y afectivos del hablante de manera directa y auténtica.</p>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-code card-icon"></i>
+                            <h3 class="card-title">Función Metalingüística</h3>
+                        </div>
+                        <div class="author-tag">Mateo Dirgua Hoyos</div>
+                        <div class="author-tag">Con: Angélica Montoya, Emmanuel Muñoz</div>
+                        <div class="content-box">
+                            <h4>Marco Conceptual:</h4>
+                            <p>Capacidad del lenguaje para reflexionar sobre sí mismo, fundamental en educación para fortalecer lectura, escritura y pensamiento crítico.</p>
+                            
+                            <h4>Niveles del Lenguaje:</h4>
+                            <ul class="feature-list">
+                                <li>Fonética y Fonología</li>
+                                <li>Morfología y Sintaxis</li>
+                                <li>Semántica y Pragmática</li>
+                                <li>Análisis del discurso</li>
+                            </ul>
+                            
+                            <h4>Aplicaciones Tecnológicas:</h4>
+                            <ul class="feature-list">
+                                <li>Asistentes de voz y traducción automática</li>
+                                <li>Procesamiento de lenguaje natural</li>
+                                <li>Diagnóstico de trastornos del lenguaje</li>
+                                <li>Preservación de lenguas minoritarias</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-feather-alt card-icon"></i>
+                            <h3 class="card-title">Función Poética</h3>
+                        </div>
+                        <div class="author-tag">Jhonatan Alexis Restrepo</div>
+                        <div class="author-tag">Con: Miguel Ángel Yepes</div>
+                        <div class="content-box">
+                            <h4>Definición Académica:</h4>
+                            <p>Forma de expresión que se aparta del uso cotidiano del lenguaje para crear belleza, transmitir emociones y provocar sensaciones estéticas en el receptor.</p>
+                            
+                            <h4>Recursos Característicos:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Lenguaje figurado:</strong> Metáforas, símiles, alegorías</li>
+                                <li><strong>Musicalidad:</strong> Rima, ritmo, aliteración</li>
+                                <li><strong>Recursos retóricos:</strong> Hipérbole, personificación, sinestesia</li>
+                                <li><strong>Expresión subjetiva:</strong> Perspectiva personal del autor</li>
+                            </ul>
+                            
+                            <p><strong>Impacto:</strong> Genera experiencias estéticas profundas que despiertan emociones y reflexiones en el lector.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evidencia3" class="content-section">
+                <div class="section-header">
+                    <div class="evidence-badge">3ª EVIDENCIA</div>
+                    <h2 class="section-title">Comunicación No Verbal - Análisis Especializado</h2>
+                </div>
+
+                <div class="professional-grid">
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-eye card-icon"></i>
+                            <h3 class="card-title">Kinésica: Lenguaje Corporal</h3>
+                        </div>
+                        <div class="author-tag">Emanuel Lara Tejada</div>
+                        <div class="author-tag">Con: Yorman Alirio Ocampo, Manuel Esteban Sanchez</div>
+                        <div class="content-box">
+                            <h4>Dimensiones de Análisis:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Expresión facial:</strong> Comunicación de emociones básicas universales</li>
+                                <li><strong>Contacto visual:</strong> Transmisión de autoridad, confianza e interés</li>
+                                <li><strong>Posturas corporales:</strong> Reflejo de actitudes y estados emocionales</li>
+                                <li><strong>Gestos manuales:</strong> Complemento o sustitución del lenguaje verbal</li>
+                                <li><strong>Orientación corporal:</strong> Indicador de disposición comunicativa</li>
+                                <li><strong>Apariencia personal:</strong> Proyección de identidad profesional</li>
+                            </ul>
+                            
+                            <h4>Aplicaciones Profesionales en ADSO:</h4>
+                            <ul class="feature-list">
+                                <li>Presentaciones técnicas efectivas</li>
+                                <li>Entrevistas laborales exitosas</li>
+                                <li>Trabajo en equipo optimizado</li>
+                                <li>Atención al cliente especializada</li>
+                            </ul>
+                            <ul class="feature-list">
+                                <li>Análisis Cinematográfico:
+                                    Escena en la que los niños escriben en braille
+Gestos: Movimientos rápidos y precisos de los dedos. Tacto sensible sobre la tableta para interpretar y escribir.
+Expresiones Faciales: Concentración intensa. Rostros serios, atentos al relato de la profesora, sin distracciones.
+Postura Corporal: Espalda recta y firme, denotando enfoque total en la tarea.
+Contacto Visual: La profesora observa con una mirada de alegría y orgullo, como aprobando su esfuerzo. Los niños no mantienen contacto visual porque su foco está en el tacto.
+
+                                </li>
+                            
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-tie card-icon"></i>
+                            <h3 class="card-title">Protocolo y Vestimenta Profesional</h3>
+                        </div>
+                        <div class="author-tag">Jhonatan Alexis Restrepo</div>
+                        <div class="author-tag">Con: Miguel Ángel Yepes</div>
+                        <div class="content-box">
+                            <h4>Vestimenta como Código No Verbal:</h4>
+                            <p>Proyección de identidad personal y profesional que comunica competencia, estatus y pertenencia cultural en contextos laborales específicos.</p>
+                            
+                            <h4>Protocolo Social:</h4>
+                            <p>Sistema de normas que regulan interacciones profesionales, facilitando comunicación efectiva y manteniendo armonía en relaciones interpersonales complejas.</p>
+                            
+                            <h4>Semiótica del Saludo:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Variación cultural:</strong> Adaptación según contexto geográfico</li>
+                                <li><strong>Jerarquías profesionales:</strong> Respeto de estructuras organizacionales</li>
+                                <li><strong>Primera impresión:</strong> Impacto en evaluaciones profesionales</li>
+                                <li><strong>Construcción de rapport:</strong> Establecimiento de confianza mutua</li>
+                            </ul>
+                            
+                            <h4>Análisis Intercultural:</h4>
+                            <p>Estudio de protocolos en diferentes contextos culturales, especialmente relevante para equipos de desarrollo globales en tecnología.</p>
+                            <ul class="feature-list">
+                                <li>Análisis Cinematográfico:
+                                    El “enojo” con la madre y la búsqueda de reconciliación
+    Contexto: Mohammad, cegado por la frustración y el dolor de sentirse abandonado, “deja ir” a la figura materna (en este caso representada por la abuela, que cumple ese rol protector). Poco después, arrepentido y con miedo a la soledad, busca que regrese, mostrando su dependencia emocional.
+    Comunicación no verbal:
+    Saludo: Al inicio, el niño se muestra distante, no busca contacto; su “enojo” se expresa en gestos cerrados, silencio y tensión corporal.
+    
+    
+    Protocolo: En la cultura iraní, el respeto y la unión familiar son esenciales, sobre todo hacia la madre o abuela. Aquí se rompe ese protocolo, ya que el niño se niega a mostrar el afecto esperado, reflejando un conflicto interior.
+    
+    
+    Vestimenta: Mohammad conserva su ropa sencilla y limpia, símbolo de inocencia y pureza. La abuela, con su vestimenta tradicional, encarna la figura de raíz y protección.
+    
+                                </li>
+                        </div>
+                    </div>
+
+                    <div class="professional-card">
+                        <div class="card-header">
+                            <i class="fas fa-hands card-icon"></i>
+                            <h3 class="card-title">Emblemas y Ademanes</h3>
+                        </div>
+                        <div class="author-tag">Mateo Dirgua Hoyos</div>
+                        <div class="author-tag">Con: Angélica María Montoya, Emmanuel Muñoz</div>
+                        <div class="content-box">
+                            <h4>Diferenciación Conceptual:</h4>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                                <div style="background: rgba(16, 185, 129, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                                    <h5 style="color: var(--accent-emerald); margin-bottom: 1rem;">EMBLEMAS</h5>
+                                    <ul class="feature-list" style="font-size: 0.95rem;">
+                                        <li>Significado específico y directo</li>
+                                        <li>Sustitutos del lenguaje verbal</li>
+                                        <li>Culturalmente determinados</li>
+                                        <li>Intencionalidad comunicativa clara</li>
+                                    </ul>
+                                    <p style="margin-top: 1rem; font-style: italic; color: var(--text-gray);">Ejemplos: Pulgar arriba, señal de paz, gesto de silencio</p>
+                                </div>
+                                
+                                <div style="background: rgba(59, 130, 246, 0.1); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                                    <h5 style="color: var(--accent-sapphire); margin-bottom: 1rem;">ADEMANES</h5>
+                                    <ul class="feature-list" style="font-size: 0.95rem;">
+                                        <li>Acompañan el discurso verbal</li>
+                                        <li>Enfatizan y complementan</li>
+                                        <li>Varían según personalidad</li>
+                                        <li>Expresividad natural</li>
+                                    </ul>
+                                    <p style="margin-top: 1rem; font-style: italic; color: var(--text-gray);">Ejemplos: Gesticulación al explicar, movimientos expresivos</p>
+                                </div>
+                            </div>
+                            
+                            <h4>Relevancia en Desarrollo de Software:</h4>
+                            <ul class="feature-list">
+                                <li>Comunicación en equipos multiculturales</li>
+                                <li>Presentaciones técnicas efectivas</li>
+                                <li>Interfaces usuario-máquina intuitivas</li>
+                                <li>Detección de incongruencias comunicativas</li>
+                            </ul>
+                            <ul class="feature-list">
+                                <li>Análisis Cinematográfico:
+                                    El nido del pichón (Escena en la aldea)
+Ademanes/Emblemas: Mohammad trepa a un árbol y encuentra un pichón que se ha caído del nido. Sus manos exploran con extrema delicadeza el cuerpo del ave. Este ademán es de pura compasión y empatía. Es un emblema de su rol como protector de lo frágil, reflejando su propia vulnerabilidad. Luego, lleva el pichón a su abuela, buscando ayuda.
+
+Significado: Muestra su conexión espiritual e inocente con la naturaleza y la vida. Es un gesto que su padre, centrado en lo práctico y lo material, es incapaz de entender.
+
+                                </li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evidencia4" class="content-section">
+                <div class="section-header">
+                    <div class="evidence-badge">4ª EVIDENCIA</div>
+                    <h2 class="section-title">Análisis Cinematográfico: "El Color del Paraíso"</h2>
+                </div>
+
+                <div class="objective-highlight">
+                    <i class="fas fa-film"></i>
+                    Aplicación práctica del análisis de comunicación no verbal en contexto cinematográfico iraní
+                </div>
+
+                <div class="story-showcase">
+                    <h3 class="story-title">Reflexión Filosófica Grupal</h3>
+                    <div class="professional-grid">
+                        <div class="content-box">
+                            <h4>Emanuel Lara Tejada:</h4>
+                            <p class="story-text">"El paraíso tiene el color de la ternura, la paciencia y el amor incondicional. No es azul, verde o dorado, es el color que sientes cuando alguien te abraza y te hace sentir en casa, seguro y amado. El color del paraíso es aquel que se siente, no algo que se ve."</p>
+                        </div>
+                        
+                        <div class="content-box">
+                            <h4>Jhonatan Restrepo:</h4>
+                            <p class="story-text">"El verdadero color del paraíso está en las emociones y actitudes que de alguna manera debemos valorar en la vida y hacia los demás. Para mí, el paraíso no tiene un color definido porque no depende de lo visual, sino de lo que sentimos: la fe, la esperanza y el amor."</p>
+                        </div>
+                        
+                        <div class="content-box">
+                            <h4>Mateo Dirgua:</h4>
+                            <p class="story-text">"El color del paraíso es, sin duda, el Dorado.
+                                La película construye esta respuesta de manera gradual y poderosa: 
+                                El Paraíso como un lugar táctil y sonoro: Para Mohammad, el paraíso no es un concepto visual abstracto. Es el sonido del viento en los árboles, el canto de los pájaros, el tacto de la madera y de los pétalos de flores. Es la calidez del sol en su rostro.
+"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reflection-container">
+                    <h3 class="story-title">Análisis de Comunicación No Verbal por Escenas</h3>
+                    
+                    <div class="professional-grid">
+                        <div class="professional-card">
+                            <div class="card-header">
+                                <i class="fas fa-eye card-icon"></i>
+                                <h3 class="card-title">Análisis Kinésico</h3>
+                            </div>
+                            <div class="author-tag">Emanuel Lara</div>
+                            <div class="content-box">
+                                <h4>Escena: Niños escribiendo en Braille</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Gestos:</strong> Movimientos precisos de dedos, tacto sensible</li>
+                                    <li><strong>Expresiones:</strong> Concentración intensa, rostros atentos</li>
+                                    <li><strong>Postura:</strong> Espalda erguida, enfoque total</li>
+                                    <li><strong>Contacto visual:</strong> Profesora observa con orgullo</li>
+                                </ul>
+                                
+                                <h4>Escena: Exploración del río</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Gestos:</strong> Exploración curiosa y delicada</li>
+                                    <li><strong>Expresiones:</strong> Sorpresa transformándose en felicidad</li>
+                                    <li><strong>Postura:</strong> Inclinación hacia adelante, emoción</li>
+                                    <li><strong>Mirada paterna:</strong> Observación conmovedora a distancia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="professional-card">
+                            <div class="card-header">
+                                <i class="fas fa-user-tie card-icon"></i>
+                                <h3 class="card-title">Protocolo Cultural</h3>
+                            </div>
+                            <div class="author-tag">Jhonatan Restrepo</div>
+                            <div class="content-box">
+                                <h4>Escena: Regreso del colegio</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Saludo:</strong> Mohammad sonriente vs. padre frío</li>
+                                    <li><strong>Protocolo roto:</strong> Ausencia del abrazo esperado</li>
+                                    <li><strong>Vestimenta:</strong> Uniforme escolar vs. ropa campesina</li>
+                                    <li><strong>Lenguaje corporal:</strong> Distancia emocional evidente</li>
+                                </ul>
+                                
+                                <h4>Escena: Ceremonia de boda</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Protocolo social:</strong> Inclinaciones, apretones respetuosos</li>
+                                    <li><strong>Vestimenta formal:</strong> Solemnidad del evento</li>
+                                    <li><strong>Ocultamiento:</strong> Padre no menciona a Mohammad</li>
+                                    <li><strong>Rigidez corporal:</strong> Tensión por secreto guardado</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="professional-card">
+                            <div class="card-header">
+                                <i class="fas fa-hands card-icon"></i>
+                                <h3 class="card-title">Emblemas y Ademanes</h3>
+                            </div>
+                            <div class="author-tag">Mateo Dirgua</div>
+                            <div class="content-box">
+                                <h4>Escena: Llegada a casa de la abuela</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Ademanes:</strong> Niño agita manos acompañando el grito</li>
+                                    <li><strong>Gesticulación natural:</strong> Expresión de alegría al llegar</li>
+                                    <li><strong>Movimiento corporal:</strong> Energía y emoción del reencuentro</li>
+                                </ul>
+                                
+                                <h4>Escena: Coqueteo no verbal</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Emblema cultural:</strong> Mujer muestra mejilla</li>
+                                    <li><strong>Significado específico:</strong> "Quiero tu afecto/atención"</li>
+                                    <li><strong>Comunicación sin palabras:</strong> Mensaje romántico directo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="equipo" class="content-section">
+                <div class="section-header">
+                    <i class="fas fa-users card-icon"></i>
+                    <h2 class="section-title">Nuestro Equipo de Trabajo</h2>
+                </div>
+                
+                <div class="team-section">
+                    <div class="team-card">
+                        <div class="team-name">Emanuel Lara Tejada</div>
+                        <p class="team-description">
+                            Especialista en comunicación emotiva y análisis kinésico. Su enfoque creativo e innovador le permite encontrar soluciones tanto en comunicación interpersonal como en desarrollo de software. Lidera investigaciones sobre expresión emocional y lenguaje corporal en contextos profesionales.
+                        </p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Función Emotiva</span>
+                            <span class="skill-tag">Kinésica</span>
+                            <span class="skill-tag">Desarrollo Frontend</span>
+                            <span class="skill-tag">Comunicación Asertiva</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-name">Jhonatan Alexis Restrepo</div>
+                        <p class="team-description">
+                            Experto en función poética del lenguaje y protocolos de comunicación no verbal. Su perspectiva analítica y atención al detalle lo destacan en el análisis de códigos comunicativos profesionales. Especialista en vestimenta como lenguaje y protocolo empresarial.
+                        </p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Función Poética</span>
+                            <span class="skill-tag">Protocolo Profesional</span>
+                            <span class="skill-tag">Análisis Cultural</span>
+                            <span class="skill-tag">Comunicación Intercultural</span>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-name">Mateo Dirgua Hoyos</div>
+                        <p class="team-description">
+                            Investigador de función metalingüística y especialista en emblemas y ademanes. Su capacidad para analizar sistemas comunicativos complejos lo convierte en un valioso miembro del equipo. Enfoque particular en comunicación técnica y análisis semiótico aplicado.
+                        </p>
+                        <div class="skills-list">
+                            <span class="skill-tag">Función Metalingüística</span>
+                            <span class="skill-tag">Emblemas y Ademanes</span>
+                            <span class="skill-tag">Análisis Semiótico</span>
+                            <span class="skill-tag">Comunicación Técnica</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer-section">
+            <p class="footer-text">
+                <strong>Portafolio Académico de Comunicación</strong><br>
+                Programa Análisis y Desarrollo de Software (ADSO) - Ficha 3147913<br>
+                Centro de Servicios y Gestión Empresarial - SENA<br>
+                Instructora: Kenia Nayiver López Ramírez<br><br>
+                <em>Desarrollado con compromiso académico y excelencia profesional</em>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Barra de progreso de scroll
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollProgress + '%';
+        });
+
+        // Smooth scrolling para navegación
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de aparición de cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.professional-card, .team-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
